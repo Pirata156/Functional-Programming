@@ -9,7 +9,7 @@ enumFromTo' i f = if (i <= f) then (i : (enumFromTo' (i + 1) f)) else []
 
 -- 2)
 enumFromThenTo' :: Int -> Int -> Int -> [Int]
-enumFromThenTo' i s f = if (i <= f) then (i : (enumFromThenTo' s (s + (s - i)) f)) else []
+enumFromThenTo' i s f = if (i <= f) then (i : (enumFromThenTo' (i + (s - 1)) s f)) else []
 
 -- 3)
 (+-+) :: [a] -> [a] -> [a]
